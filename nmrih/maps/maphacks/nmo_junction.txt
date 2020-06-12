@@ -1,0 +1,35 @@
+"MapHack"
+{
+    "entities"
+	{	
+		$edit_all
+		{
+			"classname"	"overlord_zombie_helper"
+			"keyvalues"
+			{
+                "max_zombie_count" "110"
+			}
+		}
+		"point_servercommand"
+		{
+			"targetname"	"server_point"
+			"angles" "0 167 0"
+	        "origin" "1172.01 902.01 -137.99"
+			"keyvalues"
+			{
+			}
+		}
+		$edit_all
+		{
+			"classname"	"logic_auto"
+			"keyvalues"
+			{
+				"connections"
+				{
+					"OnMapSpawn" "server_point,Command,sm_cvar sv_spawn_density 2.0,0,-1"
+					"OnMapSpawn" "server_point,Command,sm_cvar ov_runner_chance 0.12,0,-1"
+				}
+	        }
+        }
+    }
+}

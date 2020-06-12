@@ -1,0 +1,124 @@
+"MapHack"
+{
+	"entities"
+    {
+		// I left respawn only in the Mickey garage - other respawns are deleted
+		//parking
+		$fire { "targetname" "lcspwn" "input" "Kill" "value" "" }
+		$fire { "id" "5026125" "input" "Kill" "value" "" }
+		$fire { "id" "5026133" "input" "Kill" "value" "" }
+		$fire { "id" "5026153" "input" "Kill" "value" "" }
+		$fire { "id" "5026159" "input" "Kill" "value" "" }
+		$fire { "id" "5026165" "input" "Kill" "value" "" }
+		$fire { "id" "5026183" "input" "Kill" "value" "" }
+		$fire { "id" "5026195" "input" "Kill" "value" "" }
+		//
+		//store
+		$fire { "targetname" "re1" "input" "Kill" "value" "" }
+		$fire { "id" "6046136" "input" "Kill" "value" "" }
+		$fire { "id" "6046224" "input" "Kill" "value" "" }
+		$fire { "id" "6046244" "input" "Kill" "value" "" }
+		$fire { "id" "6046284" "input" "Kill" "value" "" }
+		$fire { "id" "6046624" "input" "Kill" "value" "" }
+		$fire { "id" "6046700" "input" "Kill" "value" "" }
+		$fire { "id" "6046820" "input" "Kill" "value" "" }
+		$fire { "id" "6046881" "input" "Kill" "value" "" }
+		//
+		
+		$edit_all
+		{
+			"classname"	"overlord_zombie_helper"
+			"keyvalues"
+			{
+			    "max_zombie_count" "110"
+			}
+		}
+		"point_servercommand"
+		{
+			"targetname"	"server_point"
+			"angles" "0 167 0"
+	        "origin" "1172.01 902.01 -137.99"
+			"keyvalues"
+			{
+			}
+		}
+		$edit_all
+		{
+			"classname"	"logic_auto"
+			"keyvalues"
+			{
+				"connections"
+				{
+					"OnMapSpawn" "server_point,Command,sm_cvar sv_spawn_density 2.0,0,-1"
+					"OnMapSpawn" "server_point,Command,sm_cvar ov_runner_chance 0.2,0,-1"
+				}
+	        }
+        }
+		"prop_dynamic"
+		{
+			"targetname" "tree1"
+			"origin" "-1112 420 -7"
+			"angles" "0 0 0"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum01.mdl"
+				"skin" "3"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "tree2"
+			"origin" "291 1011 6.53549"
+			"angles" "0 193.5 0"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum01.mdl"
+				"skin" "3"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "tree3"
+			"origin" "297 600 0"
+			"angles" "0 15 0"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/tree_birch_2c.mdl"
+				"skin" "2"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "tree4"
+			"origin" "701 1016 7.07701"
+			"angles" "0 244 0"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/tree_birch_2c.mdl"
+				"skin" "3"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "tree5"
+			"origin" "-664 2819 6.53549"
+			"angles" "0 193.5 0"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum01.mdl"
+				"skin" "1"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "tree6"
+			"origin" "-660 2339 6.53546"
+			"angles" "0 333 0"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum01.mdl"
+				"skin" "1"
+			}
+		}
+    }
+}

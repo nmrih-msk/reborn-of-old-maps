@@ -1,0 +1,408 @@
+"MapHack"
+{
+	"pre_entities"
+	{
+	    $remove { "id" "1824776" }
+		$remove { "id" "1824780" }
+		$remove { "id" "1824782" }
+		$remove { "id" "1824784" }
+		$remove { "id" "1824478" }
+		$remove { "id" "1824786" }
+		$remove { "id" "1824774" }
+		$remove { "id" "1824778" }
+		$remove { "id" "1824602" }
+		$remove { "id" "1824698" }
+		$remove { "id" "1824598" }
+		$remove { "id" "1824670" }
+		$remove { "id" "1839007" }
+		$remove { "id" "1839005" }
+		$remove { "id" "1839009" }
+		$remove { "id" "1824630" }
+		$remove { "id" "1824622" }
+		$remove { "id" "1824758" }
+		$remove { "id" "1824422" }
+		$remove { "id" "1687981" }
+		$remove { "id" "1687985" }
+		
+		// removed wood board between the kitchen and the basement
+		$remove { "id" "1672661" }
+		
+		// removed one of chainsaw anf fuel
+		$remove { "id" "1356731" }
+		$remove { "id" "1509118" }
+		$remove { "id" "1521941" }
+	}
+	"entities"
+    {
+		$edit
+		{
+			"targetname" "overlard"
+			"keyvalues"
+			{
+			    "initial_spawn" "30"
+				"zombie_increment" "24"
+				"resupply_freq" "6"
+				"first_runner_wave" "2"
+				"first_child_wave" "2"
+			}
+		}
+		$edit_all
+		{
+			"classname"	"overlord_zombie_helper"
+			"keyvalues"
+			{
+                "max_zombie_count" "150"
+			}
+		}
+		
+		"point_servercommand"
+		{
+			"targetname"	"server_point"
+			"angles" "0 167 0"
+	        "origin" "1172.01 902.01 -137.99"
+			"keyvalues"
+			{
+			}
+		}
+		
+		$fire { "targetname" "server_point" "input" "Command" "value" "sm_cvar ov_runner_chance 0.25" }
+		$fire { "targetname" "server_point" "input" "Command" "value" "sm_cvar ov_runner_kid_chance 0.7" }
+		$fire { "targetname" "server_point" "input" "Command" "value" "sm_cvar ov_max_zombie_count 150" }
+		
+		// blocked every window in the house on 2 floor
+		"prop_physics_override"
+		{
+			"targetname" "woods_1"
+			"origin" "-164 556 328"
+			"angles"	"0 0 0"
+			"keyvalues"
+			{
+				"model"			"models/props/misc/door_barricade01a.mdl"
+				"spawnflags" "522"
+			}
+		}
+		"prop_physics_override"
+		{
+			"targetname" "woods_2"
+			"origin" "-155 -130 331"
+			"angles" "0 0 0"
+			"keyvalues"
+			{
+				"model" "models/props/misc/door_barricade01a.mdl"
+				"spawnflags" "522"
+			}
+		}
+		"prop_physics_override"
+		{
+			"targetname" "woods_3"
+			"origin" "90 218 332"
+			"angles" "0 90 0"
+			"keyvalues"
+			{
+				"model" "models/props/misc/door_barricade01a.mdl"
+				"spawnflags" "522"
+			}
+		}
+		"prop_physics_override"
+		{
+			"targetname" "woods_4"
+			"origin" "-498 374 333"
+			"angles" "0 90 0"
+			"keyvalues"
+			{
+				"model" "models/props/misc/door_barricade01a.mdl"
+				"spawnflags" "522"
+			}
+		}
+		"prop_physics_override"
+		{
+			"targetname" "woods_5"
+			"origin" "-327 560 331"
+			"angles" "0 180 0"
+			"keyvalues"
+			{
+				"model" "models/props/misc/door_barricade01a.mdl"
+				"spawnflags" "522"
+			}
+		}
+		"prop_physics_override"
+		{
+			"targetname" "woods_6"
+			"origin" "-469 -10 382"
+			"angles" "0 270.072 89.3705"
+			"keyvalues"
+			{
+				"model" "models/static/nmrih_pogo_picnic_table.mdl"
+				"spawnflags" "522"
+			}
+		}
+		"prop_physics_override"
+		{
+			"targetname" "woods_7"
+			"origin" "-315 -131 330"
+			"angles" "0 0 0"
+			"keyvalues"
+			{
+				"model" "models/props/misc/door_barricade01a.mdl"
+				"spawnflags" "522"
+			}
+		}
+		
+		"prop_dynamic"
+		{
+			"targetname" "bush_1"
+			"origin" "-343 689 95"
+			"angles" "0 193 0"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum05.mdl"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "bush_2"
+			"origin" "-793 591 98"
+			"angles" "-5.8906 214.649 6.8165"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum05.mdl"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "bush_3"
+			"origin" "-865 786 111"
+			"angles" "-5.8906 106.649 6.8165"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum05.mdl"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "bush_4"
+			"origin" "-889 381 102"
+			"angles" "-5.8906 86.649 6.8165"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum05.mdl"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "bush_5"
+			"origin" "-1021 200.364 95"
+			"angles" "-5.8906 42.149 6.8165"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum05.mdl"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "bush_6"
+			"origin" "-752 168.152 106"
+			"angles" "-5.8906 1.649 6.8165"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum05.mdl"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "bush_7"
+			"origin" "-764 -78 102"
+			"angles" "-5.8906 241.149 6.8165"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum05.mdl"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "bush_8"
+			"origin" "-466 790 113"
+			"angles" "-5.8906 335.149 6.8165"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum05.mdl"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "bush_9"
+			"origin" "-635 864 91"
+			"angles" "0 300 0"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum05.mdl"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "bush_10"
+			"origin" "10 860 72"
+			"angles" "-5.8906 38.649 6.8165"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum05.mdl"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "bush_11"
+			"origin" "103 1104 42"
+			"angles" "-5.8906 38.649 6.8165"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum05.mdl"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "bush_12"
+			"origin" "-344 -419 101"
+			"angles" "-5.8906 303.649 6.8165"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum05.mdl"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "bush_13"
+			"origin" "94 -320 84"
+			"angles" "-5.8906 337.149 6.8165"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum05.mdl"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "bush_14"
+			"origin" "50 -512 77"
+			"angles" "-5.8906 184.149 6.8165"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum05.mdl"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "bush_15"
+			"origin" "-328 -269 130"
+			"angles" "-5.8906 38.649 6.8165"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum05.mdl"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "bush_16"
+			"origin" "108 -249 72"
+			"angles" "-5.8906 290.149 6.8165"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum05.mdl"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "bush_17"
+			"origin" "-177 1115 62"
+			"angles" "-5.8906 319.149 6.8165"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum05.mdl"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "bush_18"
+			"origin" "-224 993 83"
+			"angles" "-5.8906 38.649 6.8165"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum05.mdl"
+			}
+		}
+		"prop_dynamic"
+		{
+			"targetname" "bush_19"
+			"origin" "-387 1063 99"
+			"angles" "-5.8906 38.649 6.8165"
+			"keyvalues"
+			{
+				"model" "models/props/foliage/baum05.mdl"
+			}
+		}
+		//
+		
+		// blocked ladder on the second floor roof
+		"prop_physics_override"
+		{
+			"targetname" "ladder_1"
+			"origin" "39 734 121"
+			"angles" "-82.5 270 -180"
+			"keyvalues"
+			{
+				"model"			"models/props/misc/ladder_walkway.mdl"
+				"spawnflags" "522"
+			}
+		}
+		"prop_physics_override"
+		{
+			"targetname" "ladder_2"
+			"origin" "-4 733 124"
+			"angles" "-82.5 280 180"
+			"keyvalues"
+			{
+				"model"			"models/props/misc/ladder_walkway.mdl"
+				"spawnflags" "522"
+			}
+		}
+		"prop_physics_override"
+		{
+			"targetname" "ladder_3"
+			"origin" "82 726 121"
+			"angles" "-82.5 255 -180"
+			"keyvalues"
+			{
+				"model"			"models/props/misc/ladder_walkway.mdl"
+				"spawnflags" "522"
+			}
+		}
+		//
+
+		// more fog!
+		$edit_all
+		{
+			"classname"	"env_fog_controller"
+			"keyvalues"
+			{
+                "fogend" "600"
+			}
+		}
+		//
+		
+		// new night skybox
+		$edit_all
+		{
+			"classname" "worldspawn"
+			"keyvalues"
+			{
+				"skyname" "nmrih_harvest_skybox_"
+			}
+		}
+		//
+		
+		// delete the door in the basement
+		$remove { "targetname" "cellardoorlock" }
+		$remove { "targetname" "weld_brush1" }
+		$remove { "targetname" "nav" }
+		$remove { "targetname" "cellardoor1_brush" }
+		$remove { "id" "1520640" }
+	}
+}

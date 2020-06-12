@@ -1,0 +1,90 @@
+"MapHack"
+{
+	"entities"
+    {
+		// Deleting of respawn points
+		//the bathroom
+		$fire { "targetname" "re1" "input" "Kill" "value" "" }
+		$fire { "id" "3259618" "input" "Kill" "value" "" }
+		$fire { "id" "3259630" "input" "Kill" "value" "" }
+		$fire { "id" "3259770" "input" "Kill" "value" "" }
+		$fire { "id" "3259798" "input" "Kill" "value" "" }
+		$fire { "id" "3259898" "input" "Kill" "value" "" }
+		$fire { "id" "3259906" "input" "Kill" "value" "" }
+		$fire { "id" "3980029" "input" "Kill" "value" "" }
+		//
+		//the quarantine zone exit
+		$fire { "targetname" "midspawn" "input" "Kill" "value" "" }
+		$fire { "id" "3966743" "input" "Kill" "value" "" }
+		$fire { "id" "3966745" "input" "Kill" "value" "" }
+		$fire { "id" "3966747" "input" "Kill" "value" "" }
+		$fire { "id" "3966749" "input" "Kill" "value" "" }
+		//
+		//
+		//the mine exit
+		$fire { "targetname" "res3" "input" "Kill" "value" "" }
+		$fire { "id" "3260045" "input" "Kill" "value" "" }
+		$fire { "id" "3260051" "input" "Kill" "value" "" }
+		$fire { "id" "3260203" "input" "Kill" "value" "" }
+		$fire { "id" "3260205" "input" "Kill" "value" "" }
+		$fire { "id" "3260219" "input" "Kill" "value" "" }
+		$fire { "id" "3260221" "input" "Kill" "value" "" }
+		$fire { "id" "3260287" "input" "Kill" "value" "" }
+		//
+		//
+		$edit_all
+		{
+			"classname"	"overlord_zombie_helper"
+			"keyvalues"
+			{
+                "max_zombie_count" "110"
+			}
+		}
+		"nmrih_health_station"
+		{
+			"targetname"	"health_fema"
+			"angles" "0 167 0"
+	        "origin" "1172.01 902.01 -137.99"
+			"keyvalues"
+			{
+
+			}
+		}
+		"nmrih_health_station_location"
+		{
+			"targetname"	"health_location_fema"
+			"angles" "0 180 0"
+	        "origin" "-2018 2028.01 -103.99"
+			"keyvalues"
+			{
+
+			}
+		}
+		//
+		//
+		"point_servercommand"
+		{
+			"targetname"	"server_point"
+			"angles" "0 167 0"
+	        "origin" "1172.01 902.01 -137.99"
+			"keyvalues"
+			{
+			}
+		}
+		$edit_all
+		{
+			"classname"	"logic_auto"
+			"keyvalues"
+			{
+				"connections"
+				{
+					// no regeneration
+					"OnMapSpawn" "server_point,Command,sm_cvar sv_spawn_density 2.0,0,-1"
+					"OnMapSpawn" "server_point,Command,sm_cvar ov_runner_chance 0.15,0,-1"
+				}
+	        }
+        }
+		//
+		//
+	}
+}
