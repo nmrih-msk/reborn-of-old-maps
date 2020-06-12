@@ -1,0 +1,143 @@
+"MapHack"
+{
+	"entities"
+    {
+		$edit
+		{
+			"targetname" "wave_controller"
+			"keyvalues"
+			{
+			    "initial_spawn" "30"
+				"zombie_increment" "27"
+				"resupply_freq" "6"
+				"first_runner_wave" "2"
+				"first_child_wave" "2"
+			}
+		}
+		
+		$edit
+		{
+			"targetname" "wave_controller"
+			"keyvalues"
+			{
+			    "connections"
+				{
+                    "OnCustomWinBegin" "woods_1,Kill,,0,-1"
+				}
+			}
+		}
+		//
+		$remove { "id" "933252" }
+        
+		"prop_physics_override"
+		{
+			"targetname" "woods_1"
+			"origin" "168 414 171"
+			"angles" "0 0 0"
+			"keyvalues"
+			{
+				"model"			"models/props/misc/door_barricade01a.mdl"
+				"disableshadows" "1"
+				"spawnflags" "522"
+			}
+		}
+		
+		$edit_all
+		{
+			"classname"	"overlord_zombie_helper"
+			"keyvalues"
+			{
+                "max_zombie_count" "150"
+			}
+		}
+		"point_servercommand"
+		{
+			"targetname"	"server_point"
+			"angles" "0 167 0"
+	        "origin" "1172.01 902.01 -137.99"
+			"keyvalues"
+			{
+			}
+		}
+		$fire { "targetname" "server_point" "input" "Command" "value" "sm_cvar ov_max_zombie_count 150" }
+		$fire { "targetname" "server_point" "input" "Command" "value" "sm_cvar ov_runner_chance 0.12" }
+		$fire { "targetname" "server_point" "input" "Command" "value" "sm_cvar ov_runner_kid_chance 0.7" }
+		
+		$edit_all
+		{
+			"classname"	"logic_auto"
+			"keyvalues"
+			{
+				"connections"
+				{
+					"OnMapSpawn" "server_point,Command,say Do not lose the point C or you will lose!,0,-1"
+					"OnMapSpawn" "message2,Display,,0,-1"
+				}
+	        }
+        }
+		
+		"nmrih_game_state"
+		{
+			"targetname"	"the_end"
+			"angles" "0 167 0"
+	        "origin" "1172.01 902.01 -137.99"
+			"keyvalues"
+			{
+			}
+		}
+		
+		"game_text"
+		{
+			"targetname"	"message1"
+			"angles" "0 167 0"
+	        "origin" "1172.01 902.01 -137.99"
+			"keyvalues"
+			{
+			"message" "Game over! You lost the point C."
+			"x" "-1"
+        	"y" "-1"
+			"channel" "5"
+	        "color" "255 255 255"
+	        "color2" "255 255 255"
+	        "fadein" "1.5"
+	        "fadeout" "0.5"
+	        "fxtime" "0.25"
+	        "holdtime" "8"
+			}
+		}
+		
+		"game_text"
+		{
+			"targetname"	"message2"
+			"angles" "0 167 0"
+	        "origin" "1172.01 902.01 -137.99"
+			"keyvalues"
+			{
+			"message" "Do not lose the point C or you will lose!"
+			"x" "-1"
+        	"y" "-1"
+			"channel" "5"
+	        "color" "255 255 255"
+	        "color2" "255 255 255"
+	        "fadein" "1.5"
+	        "fadeout" "0.5"
+	        "fxtime" "0.25"
+	        "holdtime" "5"
+			}
+		}
+		
+		$edit
+		{
+			"classname" "func_safe_zone"
+			"targetname"	"szc"
+			"keyvalues"
+			{
+				"connections"
+				{
+					"OnDeactivate" "message1,Display,,0,-1"
+					"OnDeactivate" "the_end,RestartRound,,6,-1"
+				}
+	        }
+        }
+	}
+}

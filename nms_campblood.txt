@@ -1,0 +1,92 @@
+"MapHack"
+{
+	"entities"
+    {
+		$edit
+		{
+			"targetname" "wave_controller"
+			"keyvalues"
+			{
+			    "initial_spawn" "30"
+				"zombie_increment" "24"
+				"resupply_freq" "6"
+				"first_runner_wave" "2"
+				"first_child_wave" "2"
+			}
+		}
+		$edit_all
+		{
+			"classname"	"overlord_zombie_helper"
+			"keyvalues"
+			{
+                "max_zombie_count" "150"
+			}
+		}
+		
+		$edit
+		{
+			"targetname" "fogmaster"
+			"keyvalues"
+			{
+			    "farz" "850"
+				"fogend" "800"
+			}
+		}
+		
+		$edit_all
+		{
+			"classname" "sky_camera"
+			"keyvalues"
+			{
+			    "fogend" "800"
+	            "fogstart" "80"
+			}
+		}
+		
+		"prop_physics_override"
+		{
+			"targetname" "ladder_1"
+			"origin" "959 -1282 224"
+			"angles" "-90 270 0"
+			"keyvalues"
+			{
+				"model"			"models/props/misc/ladder_walkway.mdl"
+				"spawnflags" "522"
+			}
+		}
+		"prop_physics_override"
+		{
+			"targetname" "ladder_2"
+			"origin" "920 -1281.96 224"
+			"angles" "-90 270 0"
+			"keyvalues"
+			{
+				"model"			"models/props/misc/ladder_walkway.mdl"
+				"spawnflags" "522"
+			}
+		}
+		"prop_physics_override"
+		{
+			"targetname" "ladder_3"
+			"origin" "881 -1282 224"
+			"angles" "-90 270 0"
+			"keyvalues"
+			{
+				"model"			"models/props/misc/ladder_walkway.mdl"
+				"spawnflags" "522"
+			}
+		}
+		"point_servercommand"
+		{
+			"targetname"	"server_point"
+			"angles" "0 167 0"
+	        "origin" "1172.01 902.01 -137.99"
+			"keyvalues"
+			{
+			}
+		}
+		$fire { "targetname" "server_point" "input" "Command" "value" "sm_cvar ov_max_zombie_count 150" }
+		$fire { "targetname" "server_point" "input" "Command" "value" "sm_cvar ov_runner_chance 0.2" }
+		$fire { "targetname" "server_point" "input" "Command" "value" "sm_cvar ov_runner_kid_chance 0.7" }
+	}
+}

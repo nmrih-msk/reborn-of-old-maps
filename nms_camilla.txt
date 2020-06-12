@@ -1,0 +1,24 @@
+"MapHack"
+{
+	"entities"
+    {
+		$edit_all
+		{
+			"classname"	"overlord_zombie_helper"
+			"keyvalues"
+			{
+                "max_zombie_count" "150"
+			}
+		}
+		"point_servercommand"
+		{
+			"targetname"	"server_point"
+			"angles" "0 167 0"
+	        "origin" "1172.01 902.01 -137.99"
+			"keyvalues"
+			{
+			}
+		}
+		$fire { "targetname" "server_point" "input" "Command" "value" "sm_cvar ov_max_zombie_count 150" }
+	}
+}

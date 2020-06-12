@@ -1,0 +1,38 @@
+"MapHack"
+{
+	"entities"
+    {
+		$edit
+		{
+			"targetname" "wave_controller"
+			"keyvalues"
+			{
+			    "initial_spawn" "30"
+				"zombie_increment" "27"
+				"resupply_freq" "6"
+				"first_runner_wave" "2"
+				"first_child_wave" "2"
+			}
+		}
+		$edit_all
+		{
+			"classname"	"overlord_zombie_helper"
+			"keyvalues"
+			{
+                "max_zombie_count" "100"
+			}
+		}
+		"point_servercommand"
+		{
+			"targetname"	"server_point"
+			"angles" "0 167 0"
+	        "origin" "1172.01 902.01 -137.99"
+			"keyvalues"
+			{
+			}
+		}
+		$fire { "targetname" "server_point" "input" "Command" "value" "sm_cvar ov_runner_chance 0.25" }
+		$fire { "targetname" "server_point" "input" "Command" "value" "sm_cvar ov_max_zombie_count 100" }
+		$fire { "targetname" "server_point" "input" "Command" "value" "sm_cvar ov_runner_kid_chance 0.7" }
+	}
+}

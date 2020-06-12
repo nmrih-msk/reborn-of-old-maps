@@ -1,0 +1,363 @@
+"MapHack"
+{
+	"entities"
+    {
+		$edit
+		{
+			"targetname" "wave_controller"
+			"keyvalues"
+			{
+			    "initial_spawn" "30"
+				"zombie_increment" "27"
+				"resupply_freq" "6"
+				"first_runner_wave" "2"
+				"first_child_wave" "2"
+			}
+		}
+		
+		$edit_all
+		{
+			"classname"	"overlord_zombie_helper"
+			"keyvalues"
+			{
+                "max_zombie_count" "150"
+			}
+		}
+		"point_servercommand"
+		{
+			"targetname"	"server_point"
+			"angles" "0 167 0"
+	        "origin" "1172.01 902.01 -137.99"
+			"keyvalues"
+			{
+			}
+		}
+		
+		$fire { "targetname" "server_point" "input" "Command" "value" "sm_cvar ov_max_zombie_count 150" }
+		
+		"nmrih_barricade"
+		{
+			"targetname"	"board1_1"
+			"origin" "-759.863 776 66.3355"
+			"angles" "-0.497267 179.948 -174"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+			"angles" "0 0 -4.5"
+	        "targetname" "board1_2"
+	        "origin" "-760.863 776.14 57.5788"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+			"angles" "0 0 0"
+	        "targetname" "board1_3"
+	        "origin" "-760.863 776 49.3356"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+			"angles" "0 0 -3.5"
+	        "targetname" "board1_4"
+	        "origin" "-760.863 776 40.3355"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "-0.497267 269.948 -174"
+	"targetname" "board2_1"
+	"origin" "-802 748.137 66.3355"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "0 90 -4.5"
+	"targetname" "board2_2"
+	"origin" "-802.14 747.137 57.5788"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "0 90 0"
+	"targetname" "board2_3"
+	"origin" "-802 747.137 49.3356"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "0 90 -3.5"
+	"targetname" "board2_4"
+	"origin" "-802 747.137 40.3355"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "-0.497267 269.948 -174"
+	"targetname" "board3_1"
+	"origin" "-873.365 347.137 66.3355"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "0 90 -4.5"
+	"targetname" "board3_2"
+	"origin" "-873.505 346.137 57.5788"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "0 90 0"
+	"targetname" "board3_3"
+	"origin" "-873.365 346.137 49.3356"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "0 90 -3.5"
+	"targetname" "board3_4"
+	"origin" "-873.365 346.137 40.3355"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "-0.497267 359.948 -174"
+	"targetname" "board4_1"
+	"origin" "-884.137 1011.64 66.3355"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "0 180 -4.5"
+	"targetname" "board4_2"
+	"origin" "-883.137 1011.5 57.5788"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "0 180 0"
+	"targetname" "board4_3"
+	"origin" "-883.137 1011.64 49.3356"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "0 180 -3.5"
+	"targetname" "board4_4"
+	"origin" "-883.137 1011.64 40.3355"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "-0.497267 359.948 -174"
+	"targetname" "board5_1"
+	"origin" "-665.137 1156 66.3355"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "0 180 -4.5"
+	"targetname" "board5_2"
+	"origin" "-664.137 1155.86 57.5788"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "0 180 0"
+	"targetname" "board5_3"
+	"origin" "-664.137 1156 49.3356"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "0 180 -3.5"
+	"targetname" "board5_4"
+	"origin" "-664.137 1156 40.3355"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "-0.497267 359.948 -174"
+	"targetname" "board6_1"
+	"origin" "-176.137 1025 66.3355"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "0 180 -4.5"
+	"targetname" "board6_2"
+	"origin" "-175.137 1024.86 57.5788"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "0 180 0"
+	"targetname" "board6_3"
+	"origin" "-175.137 1025 49.3356"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "0 180 -3.5"
+	"targetname" "board6_4"
+	"origin" "-175.137 1025 40.3355"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "-0.497267 89.948 -174"
+	"targetname" "board7_1"
+	"origin" "-117 899 66.3355"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "0 270 -4.5"
+	"targetname" "board7_2"
+	"origin" "-116.86 900 57.5788"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "0 270 0"
+	"targetname" "board7_3"
+	"origin" "-117 900 49.3356"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "0 270 -3.5"
+	"targetname" "board7_4"
+	"origin" "-117 900 40.3355"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "-0.497267 89.948 -174"
+	"targetname" "board8_1"
+	"origin" "-107 403 66.3355"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "0 270 -4.5"
+	"targetname" "board8_2"
+	"origin" "-106.86 404 57.5788"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "0 270 0"
+	"targetname" "board8_3"
+	"origin" "-107 404 49.3356"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+	"angles" "0 270 -3.5"
+	"targetname" "board8_4"
+	"origin" "-107 404 40.3355"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+			"targetname"	"board1_1"
+			"origin" "-759.863 776 66.3355"
+			"angles" "-0.497267 179.948 -174"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+			"targetname"	"board1_1"
+			"origin" "-759.863 776 66.3355"
+			"angles" "-0.497267 179.948 -174"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+			"targetname"	"board1_1"
+			"origin" "-759.863 776 66.3355"
+			"angles" "-0.497267 179.948 -174"
+			"keyvalues"
+			{
+			}
+		}
+		"nmrih_barricade"
+		{
+			"targetname"	"board1_1"
+			"origin" "-759.863 776 66.3355"
+			"angles" "-0.497267 179.948 -174"
+			"keyvalues"
+			{
+			}
+		}
+	}
+}
