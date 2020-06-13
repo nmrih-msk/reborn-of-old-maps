@@ -1,6 +1,6 @@
 "MapHack"
 {
-	"entities"
+	"entities" test
 	{
 		$fire { "targetname" "spawnb" "input" "Kill" "value" "" }
 		$fire { "id" "1266128" "input" "Kill" "value" "" }
