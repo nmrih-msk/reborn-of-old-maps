@@ -8,7 +8,7 @@
 			"keyvalues"
 			{
 			    "initial_spawn" "30"
-				"zombie_increment" "24"
+				"zombie_increment" "27"
 				"resupply_freq" "6"
 				"first_runner_wave" "2"
 				"first_child_wave" "2"
@@ -20,6 +20,19 @@
 			"keyvalues"
 			{
                 "max_zombie_count" "150"
+			}
+		}
+		
+		//close the window on the point A
+		"prop_physics_override"
+		{
+			"origin" "-621 -1028 100"
+			"angles" "0 0 0"
+			"keyvalues"
+			{
+				"model" "models/props/misc/door_barricade01b.mdl"
+				"disableshadows" "1"
+				"spawnflags" "522"
 			}
 		}
 		

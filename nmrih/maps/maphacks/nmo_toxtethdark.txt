@@ -2,6 +2,40 @@
 {
 	"entities"
     {
+		//Disable cheating secret room with weapons
+		$remove { "targetname" "badass_door_case" }
+		$edit
+		{
+			"targetname"	"boundary_objA"
+			"keyvalues"
+			{
+				"connections"
+				{
+                    "OnObjectiveBegin" "case_delete_fucking_door,PickRandomShuffle,,0,-1"
+				}
+	        }
+        }
+		
+		
+		"logic_case"
+		{
+			"targetname"	"case_delete_fucking_door"
+			"origin"	"0 0 0"
+			"angles"	"0 0 0"
+			"keyvalues"
+			{
+				"connections"
+				{
+		        "OnCase01" "badass_door,Lock,,0,-1"
+		        "OnCase02" "badass_door,Lock,,0,-1"
+		        "OnCase04" "badass_door,Lock,,0,-1"
+		        "OnCase03" "badass_door,Lock,,0,-1"
+		        "OnCase05" "badass_door,Lock,,0,-1"
+				}
+	        }
+        }
+		//
+		
 		// Deleting of respawn points
 		//the bathroom
 		$fire { "targetname" "toxteth_spawns_chapel" "input" "Kill" "value" "" }
@@ -24,6 +58,35 @@
 		}
 		//
 		//
+		
+		//remove door of phone build, which defended player from zombies
+		$remove { "id" "438673" }
+		$remove { "id" "1274359" }
+		$remove { "id" "1274356" }
+		$remove { "targetname" "toxteth_phonebox" }
+		//
+		
+		"nmrih_health_station_location"
+		{
+			"targetname"	"health_location"
+			"origin"	"-1066.99 -6879 144"
+			"angles"	"0 180 0"
+			"keyvalues"
+			{
+
+			}
+		}
+		"nmrih_health_station"
+		{
+			"targetname"	"health"
+			"origin"	"-968 -2951 80"
+			"angles"	"0 292 0"
+			"keyvalues"
+			{
+
+			}
+		}
+		
 		"point_servercommand"
 		{
 			"targetname"	"server_point"
@@ -40,9 +103,9 @@
 			{
 				"connections"
 				{
-					// no regeneration
-					"OnMapSpawn" "server_point,Command,sm_cvar sv_spawn_density 2.0,0,-1"
-					"OnMapSpawn" "server_point,Command,sm_cvar ov_runner_chance 0.15,0,-1"
+					"OnMapSpawn" "server_point,Command,sm_cvar sv_spawn_density 1.5,0,-1"
+					"OnMapSpawn" "server_point,Command,sm_cvar ov_runner_chance 0.4,0,-1"
+					"OnMapSpawn" "server_point,Command,sm_cvar ov_runner_kid_chance 0.7,0,-1"
 				}
 	        }
         }
