@@ -113,8 +113,9 @@
 			{
 				"connections"
 				{
-					"OnMapSpawn" "server_point,Command,sm_cvar sv_spawn_density 2.0,0,-1"
-					"OnMapSpawn" "server_point,Command,sm_cvar ov_runner_chance 0.15,0,-1"
+					"OnMapSpawn" "server_point,Command,sm_cvar sv_spawn_density 1.5,0,-1"
+					"OnMapSpawn" "server_point,Command,sm_cvar ov_runner_chance 0.4,0,-1"
+					"OnMapSpawn" "server_point,Command,sm_cvar ov_runner_kid_chance 0.7,0,-1"
 				}
 	        }
         }
