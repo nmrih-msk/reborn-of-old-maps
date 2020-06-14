@@ -8,7 +8,7 @@
 			"keyvalues"
 			{
 			    "initial_spawn" "30"
-				"zombie_increment" "24"
+				"zombie_increment" "27"
 				"resupply_freq" "6"
 			}
 		}

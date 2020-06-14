@@ -29,7 +29,7 @@
 			"keyvalues"
 			{
 			    "initial_spawn" "30"
-				"zombie_increment" "24"
+				"zombie_increment" "27"
 				"resupply_freq" "6"
 				"first_runner_wave" "2"
 				"first_child_wave" "2"
@@ -45,7 +45,7 @@
 			"classname"	"overlord_zombie_helper"
 			"keyvalues"
 			{
-                "max_zombie_count" "100"
+                "max_zombie_count" "90"
 			}
 		}
 		"point_servercommand"
@@ -64,8 +64,8 @@
 			{
 				"connections"
 				{
-					"OnMapSpawn" "server_point,Command,sm_cvar ov_runner_chance 0.15,0,-1"
-					"OnMapSpawn" "server_point,Command,sm_cvar ov_max_zombie_count 100,0,-1"
+					"OnMapSpawn" "server_point,Command,sm_cvar ov_runner_chance 0.2,0,-1"
+					"OnMapSpawn" "server_point,Command,sm_cvar ov_max_zombie_count 90,0,-1"
 					"OnMapSpawn" "server_point,Command,sm_cvar ov_runner_kid_chance 0.7,0,-1"
 				}
 	        }

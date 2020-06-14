@@ -2,16 +2,6 @@
 {
     "entities"
 	{	
-		$fire { "targetname" "saferoom01_spawns" "input" "Kill" "value" "" }
-		$fire { "id" "2406913" "input" "Kill" "value" "" }
-		$fire { "id" "2406923" "input" "Kill" "value" "" }
-		$fire { "id" "2406929" "input" "Kill" "value" "" }
-		$fire { "id" "2406935" "input" "Kill" "value" "" }
-		$fire { "id" "2406939" "input" "Kill" "value" "" }
-		$fire { "id" "3841089" "input" "Kill" "value" "" }
-		$fire { "id" "3841135" "input" "Kill" "value" "" }
-		//
-		
 		$edit_all
 		{
 			"classname"	"overlord_zombie_helper"
@@ -30,6 +20,6 @@
 			}
 		}
 		$fire { "targetname" "server_point" "input" "Command" "value" "sm_cvar sv_spawn_density 2.0" }
-		$fire { "targetname" "server_point" "input" "Command" "value" "sm_cvar ov_runner_chance 0.15" }
+		$fire { "targetname" "server_point" "input" "Command" "value" "sm_cvar ov_runner_chance 0.2" }
     }
 }
