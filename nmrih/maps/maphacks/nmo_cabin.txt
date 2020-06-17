@@ -7,7 +7,7 @@
 			"classname"	"overlord_zombie_helper"
 			"keyvalues"
 			{
-                "max_zombie_count" "110"
+                "max_zombie_count" "100"
 			}
 		}
 		"point_servercommand"
@@ -27,8 +27,9 @@
 				"connections"
 				{
 					"OnMapSpawn" "server_point,Command,sm_cvar sv_spawn_density 2.0,0,-1"
-					"OnMapSpawn" "server_point,Command,sm_cvar ov_runner_chance 0.3,0,-1"
+					"OnMapSpawn" "server_point,Command,sm_cvar ov_runner_chance 0.45,0,-1"
 					"OnMapSpawn" "server_point,Command,sm_cvar ov_runner_kid_chance 0.7,0,-1"
+					"OnMapSpawn" "server_point,Command,sm_cvar ov_max_zombie_count 100,0,-1"
 				}
 	        }
         }
