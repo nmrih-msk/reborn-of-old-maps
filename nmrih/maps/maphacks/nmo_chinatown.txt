@@ -20,6 +20,8 @@
 			}
 		}
 		$fire { "targetname" "server_point" "input" "Command" "value" "sm_cvar sv_spawn_density 2.0" }
-		$fire { "targetname" "server_point" "input" "Command" "value" "sm_cvar ov_runner_chance 0.2" }
+		$fire { "targetname" "server_point" "input" "Command" "value" "sm_cvar ov_runner_chance 0.25" }
+		$fire { "targetname" "server_point" "input" "Command" "value" "sm_cvar ov_runner_kid_chance 0.7" }
+		$fire { "targetname" "server_point" "input" "Command" "value" "sm_cvar ov_max_zombie_count 110" }
     }
 }
