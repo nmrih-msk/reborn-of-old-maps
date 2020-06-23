@@ -7,7 +7,7 @@
 			"classname"	"overlord_zombie_helper"
 			"keyvalues"
 			{
-                	"max_zombie_count" "100"
+                		"max_zombie_count" "100"
 			}
 		}
 		"point_servercommand"
