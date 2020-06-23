@@ -52,8 +52,8 @@
 					"OnMapSpawn" "server_point,Command,sm_cvar sv_spawn_density 2.0,0,-1"
 					"OnMapSpawn" "server_point,Command,sm_cvar ov_runner_chance 0.2,0,-1"
 				}
-	        }
-        }
+	        	}
+        	}
 		"prop_dynamic"
 		{
 			"targetname" "tree1"
